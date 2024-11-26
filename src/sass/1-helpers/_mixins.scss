@@ -1,0 +1,13 @@
+/************ BREAKPOINTS *************/
+$breakpoints: (small: 499px,
+    medium: 1199px,
+    large: 1499px,
+    extra-large: 1699px);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (max-width: $breakpoint-value) {
+        @content;
+    }
+}

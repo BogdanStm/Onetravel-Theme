@@ -1,0 +1,13 @@
+{
+    "name": "acf/nutrition",
+    "title": "Nutrition",
+    "description": "A custom nutrition block.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["Nutrition", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "nutrition.php"
+    },
+    "align": "full"
+}

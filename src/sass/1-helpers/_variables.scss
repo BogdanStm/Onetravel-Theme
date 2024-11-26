@@ -1,0 +1,33 @@
+/************ FONTS *************/
+@font-face {
+    font-family: 'Instrument Sans';
+    src: url('./../fonts/InstrumentSans-Regular.ttf');
+}
+
+$primary-font: 'Instrument Sans', sans-serif;
+
+
+/************ COLORS *************/
+// Default colors
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #232323;
+    --white-color: #FFFFFF;
+    --gray-color: #ECF2FF;
+    --turqouise-color: #cee9e3;
+    --green-color: #0E9399;
+    --light-green-color: #e6f4f1;
+    --blue-color: #3A55B4;
+    --light-blue-color: #EAF5FD;
+}
+
+// // If theme it's dark it will be displayed with this colors.
+// [data-theme='dark'] {
+//     --primary-color: #FFFFFF;
+//     --text-color: #232323;
+//     --secondText-color: #232323;
+//     --lime-color: #D0EAB0;
+//     --pink-color: #E895D0;
+//     --orange-color: #FF9696;
+//     --cream-color: #FED5CE;
+// }

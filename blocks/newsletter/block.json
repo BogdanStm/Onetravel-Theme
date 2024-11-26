@@ -1,0 +1,13 @@
+{
+    "name": "acf/newsletter",
+    "title": "Newsletter",
+    "description": "A custom newsletter block.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["newsletter", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "newsletter.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,48 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0!important;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    font-family: $primary-font;
+}
+
+.logo {
+    width: 300px;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 120px;
+        height: 100%;
+        padding: 1rem 1rem 1rem 0;
+    }
+    
+    p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+    }
+}
+
+#presedinte-content {
+    display: none;
+}
+
+#presedinte-content.active {
+    display: block;
+}

@@ -1,0 +1,13 @@
+{
+    "name": "acf/posts",
+    "title": "Posts",
+    "description": "A custom posts block.",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["Posts", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "posts.php"
+    },
+    "align": "full"
+}
