@@ -21,28 +21,19 @@ body {
 }
 
 .logo {
-    width: 300px;
-    display: flex;
-    align-items: center;
+    padding-right: 4rem;
 
     img {
         width: 120px;
         height: 100%;
         padding: 1rem 1rem 1rem 0;
     }
-    
-    p {
-        font-size: 1.6rem;
-        line-height: 2rem;
-        font-weight: 600;
-        color: var(--secondary-color);
-    }
 }
 
-#presedinte-content {
-    display: none;
-}
 
-#presedinte-content.active {
-    display: block;
+.video {
+    margin-top: -13rem;
+    width: 100%;
+    background-color: var(--primary-color);
+    opacity: .9;
 }

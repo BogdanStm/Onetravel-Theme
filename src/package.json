@@ -19,6 +19,6 @@
     "sass-watch": "^0.1.0"
   },
   "devDependencies": {
-    "parcel": "^2.12.0"
+    "parcel": "^2.13.2"
   }
 }
