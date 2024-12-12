@@ -596,140 +596,18 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"5AKj5":[function(require,module,exports,__globalThis) {
-var _menu = require("./menu");
-window.onload = function() {
-    (0, _menu.menu)();
-// const animationEnter = (container) => {
-//     return gsap.from(container, { autoAlpha: 0, duration: 1, clearProps: 'all', ease: 'power2.out'});
-// }
-// const animationLeave = (container) => {
-//     return gsap.to(container, { autoAlpha: 0, duration: 1, clearProps: 'all', ease: 'power2.out'});
-// }
-// barba.init({
-//     transitions: [{
-//         once({next}) {
-//             animationEnter(next.container);
-//         },
-//         leave: ({current}) => animationLeave(current.container),
-//         enter({next}) {
-//             animationEnter(next.container);
-//         }
-//     }],
-// });
-// barba.hooks.after(() => {
-//     menu();
-//     biteShow();
-//     theme();
-// });
-};
-
-},{"./menu":"f6RPY"}],"f6RPY":[function(require,module,exports,__globalThis) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "menu", ()=>menu);
-function menu() {
-    const navbar = document.getElementById('nav');
-    const menuBtn = document.getElementById('menu-btn');
-    const menuClose = document.getElementById('menu-close');
-    const menuCloseIcon = document.getElementById('menu-close--icon');
-    const primaryMenu = document.getElementById('menu-primary-menu');
-    const menuOverlay = document.getElementById('menu');
-    const menuMobile = document.getElementById('mobile--menu');
-    const menuMobileBtn = document.getElementById('mobile--toggle');
-    menuMobileBtn.addEventListener('click', ()=>{
-        menuMobile.classList.toggle('active');
+window.onload = ()=>{
+    const mobileToggleOpen = document.getElementById('mobile-toggle--open');
+    const mobileToggleClose = document.getElementById('mobile-toggle--close');
+    const mobileMenu = document.getElementById('menu-mobile');
+    mobileToggleClose.style.display = 'none';
+    mobileToggleOpen.addEventListener('click', ()=>{
+        mobileMenu.classList.toggle('active');
+        mobileToggleClose.style.display = 'block';
     });
-    // function menuCloseBtn() {
-    //     menuClose.addEventListener('click', (e) => {
-    //         e.preventDefault();
-    //         primaryMenu.classList.remove('active-overlay');
-    //         const activeSubMenu = document.querySelectorAll('.sub-menu.active');
-    //         activeSubMenu.forEach(activeElem => {
-    //             activeElem.classList.remove('active');
-    //         });
-    //     })
-    // }
-    // function menuOpenBtn() {
-    //     menuBtn.addEventListener('click', (e) => {
-    //         e.preventDefault();
-    //         primaryMenu.classList.add('active-overlay');
-    //         menuCloseIcon.style.left = '450px';
-    //         let menu = window.matchMedia("(max-width: 899px)")
-    //         let query = '120px';
-    //         responsiveMenu(menu, query);
-    //         menu.addListener(responsiveMenu);
-    //     })
-    //     menuClose.addEventListener('click', (e) => {
-    //         e.preventDefault();
-    //         primaryMenu.classList.remove('active-overlay');
-    //         menuCloseIcon.style.left = '-50px';
-    //         menuCloseIcon.style.transitionDelay = '0s';
-    //     })
-    // }
-    function subMenuShow() {
-        document.querySelectorAll('.menu-item-has-children').forEach((elem)=>{
-            const subMenu = elem.querySelector('.sub-menu');
-            elem.addEventListener('mouseover', (ev)=>{
-                ev.preventDefault();
-                const activeSubMenu = document.querySelectorAll('.sub-menu.active');
-                subMenu.classList.add('active');
-            });
-            elem.addEventListener('mouseout', (ev)=>{
-                ev.preventDefault();
-                const activeSubMenu = document.querySelectorAll('.sub-menu.active');
-                activeSubMenu.forEach((activeElem)=>{
-                    activeElem.classList.remove('active');
-                });
-                subMenu.classList.remove('active');
-            });
-        });
-    }
-    const presedinte = document.getElementById('presedinte-content');
-    const presedintBtn = document.getElementById('presedinte-btn');
-    presedintBtn.addEventListener('click', (e)=>{
-        e.preventDefault();
-        presedinte.classList.add('active');
-    });
-    // function responsiveMenu(menu, query) {
-    //     if(menu.matches) {
-    //         menuCloseIcon.style.left = query;
-    //     }
-    //     window.addEventListener("scroll", e => {
-    //         navbar.classList.toggle('sticky', window.scrollY > 400);
-    //     });
-    // }
-    subMenuShow();
-// menuOpenBtn();
-// menuCloseBtn();
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports,__globalThis) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
+    mobileToggleClose.addEventListener('click', ()=>{
+        mobileMenu.classList.remove('active');
+        mobileToggleClose.style.display = 'none';
     });
 };
 

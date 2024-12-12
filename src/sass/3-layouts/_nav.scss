@@ -13,6 +13,10 @@
         z-index: 1;
         clip-path: polygon(0 0, 100% 0, calc(100% - 80px) 100%, 0% 100%);
         z-index: -1;
+
+        @include breakpoint(medium) {
+            width: 60%;
+        }
     }
 
     &-container {
@@ -23,22 +27,81 @@
         justify-content: space-between;
         align-items: center;
 
+        @include breakpoint(medium) {
+            width: 100%;
+            padding: .4rem 2rem;
+        }
+
         &--menu {
             display: flex;
             align-items: center;
             justify-content: center;
 
-            ul {
-                list-style: none;
-                display: flex;
+            .logo img {
+                @include breakpoint(medium) {
+                    width: 14rem;
+                }
+            }
 
-                li {
-                    margin-right: 2rem;
+            .menu {
 
-                    a {
-                        text-decoration: none;
-                        color: var(--primary-color);
-                        font-size: 1.4rem;
+                &-mobile {
+                    display: none;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100vh;
+                    background-color: var(--blue-color);
+                    color: var(--primary-color);
+                    align-items: center;
+                    justify-content: center;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        height: 100%;
+                        list-style: none;
+                        
+                        li {
+                            margin-right: 2rem;
+                            margin-top: 3rem;
+                            text-align: center;
+        
+                            a {
+                                text-decoration: none;
+                                color: var(--primary-color);
+                                font-size: 2.6rem;
+                            }
+                        }
+                    }
+                    @include breakpoint(medium) {
+                        &.active {
+                            display: block;
+                        }
+                    }
+                }
+
+
+                &-desktop {
+                    @include breakpoint(medium) {
+                        display: none;
+                    }
+
+                    ul {
+                        list-style: none;
+                        display: flex;
+        
+                        li {
+                            margin-right: 2rem;
+        
+                            a {
+                                text-decoration: none;
+                                color: var(--primary-color);
+                                font-size: 1.4rem;
+                            }
+                        }
                     }
                 }
             }
@@ -61,6 +124,12 @@
                 font-size: 2rem;
                 transition: all .3s ease-in-out;
 
+                @include breakpoint(medium) {
+                    font-size: 1.6rem;
+                    width: 4rem;
+                    height: 4rem;
+                }
+
                 i {
                     color: var(--blue-color);
                 }
@@ -74,6 +143,40 @@
                 }
             }
 
+            .mobile-toggle {
+                display: none;
+
+                @include breakpoint(medium) {
+                    display: block;
+                }
+                
+                &--open {
+                    background-color: var(--blue-color);
+                    color: var(--primary-color);
+                    border: none;
+                    border-radius: 10rem;
+                    font-size: 1.6rem;
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+
+                &--close {
+                    position: fixed;
+                    right: 2.5rem;
+                    top: 2.5rem;
+                    background-color: var(--primary-color);
+                    color: var(--blue-color);
+                    border: none;
+                    border-radius: 10rem;
+                    font-size: 1.6rem;
+                    width: 4rem;
+                    height: 4rem;
+                    display: block;
+                    z-index: 99;
+                }
+            }
+
             .contact {
                 background-color: var(--blue-color);
                 color: var(--primary-color);
@@ -81,6 +184,10 @@
                 border-radius: 10rem;
                 text-decoration: none;
                 transition: all .3s ease;
+
+                @include breakpoint(medium) {
+                    display: none;
+                }
 
                 &:hover {
                     transform: scale(1.04);

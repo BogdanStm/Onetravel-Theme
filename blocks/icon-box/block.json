@@ -1,0 +1,14 @@
+{
+    "name": "acf/icon-box",
+    "title": "Icon Box",
+    "description": "A custom Icon Box block.",
+    "style": "file:./style.css",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["Icon Box", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "icon-box.php"
+    },
+    "align": "full"
+}

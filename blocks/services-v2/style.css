@@ -1,0 +1,58 @@
+/* Variables and Mixins */
+/************ FONTS *************/
+@font-face {
+    font-family: 'UpaHandwriting Regular';
+    src: url('./fonts/UpaHandwritingLatin-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url('./fonts/AvenirLTStd-Medium.otf');
+}
+
+/************ COLORS *************/
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #232323;
+    --blue-color: #005EB8;
+    --light-blue-color: #F0F6FB;
+}
+
+/* Custom Block Style */
+
+.block .servicesV2 {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 10rem 0;
+    font-size: 2rem;
+}
+
+.block .servicesV2 .servicesV2-top--content .subTitle {
+    font-family: 'UpaHandwriting Regular';
+    color: var(--blue-color);
+    margin-bottom: 2rem;
+}
+
+.block .servicesV2 .servicesV2-top--content .title {
+    font-size: 4rem;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.block .servicesV2 .servicesV2-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.block .servicesV2 .servicesV2-top--btn span{
+    margin-right: 2rem;
+}
+
+.block .servicesV2 .servicesV2-container img {
+    width: 100%;
+    border-radius: 2rem;
+    margin-top: 4rem;
+}

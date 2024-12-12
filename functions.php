@@ -173,10 +173,9 @@ add_action('widgets_init', 'srghtheme_widgets_init');
 
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
-    register_block_type( __DIR__ . '/blocks/nutrition' );
-    register_block_type( __DIR__ . '/blocks/newsletter' );
-    register_block_type( __DIR__ . '/blocks/footer' );
-    register_block_type( __DIR__ . '/blocks/posts' );
+	foreach ( glob( __DIR__ . '/blocks/*' ) as $block_path ) {
+		register_block_type( $block_path );
+	}
 }
 
 /* THIS ONE FIX THE PROBLEM WITH CUSTOM POST TYPE NOT GETTING... (404 ERROR) */

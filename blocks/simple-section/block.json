@@ -1,0 +1,14 @@
+{
+    "name": "acf/simple-section",
+    "title": "Simple Section",
+    "description": "A custom section block.",
+    "style": "file:./style.css",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["Simple Section", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "simple-section.php"
+    },
+    "align": "full"
+}

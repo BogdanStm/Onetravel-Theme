@@ -1,0 +1,66 @@
+/* Variables and Mixins */
+/************ FONTS *************/
+@font-face {
+    font-family: 'UpaHandwriting Regular';
+    src: url('./fonts/UpaHandwritingLatin-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url('./fonts/AvenirLTStd-Medium.otf');
+}
+
+/************ COLORS *************/
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #232323;
+    --blue-color: #005EB8;
+    --light-blue-color: #F0F6FB;
+}
+
+/* Custom Block Style */
+
+.block .simpleSection {
+    padding: 10rem 2rem;
+}
+
+.block .simpleSection-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 10rem;
+}
+
+.block .simpleSection .simpleSection-container--content {
+    flex: 50%;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.block .simpleSection .simpleSection-container--content h1 {
+    margin-bottom: 4rem;
+    font-weight: 600;
+}
+
+.block .simpleSection .simpleSection-container--img {
+    flex: 50%;
+}
+
+.block .simpleSection .simpleSection-container--img img{
+    width: 100%;
+    border-radius: 2rem;
+}
+
+@media screen and (max-width: 499px) {
+    .block .simpleSection {
+        padding: 2rem 0;
+    }
+
+    .block .simpleSection-container {
+        padding: 0 2rem;
+        grid-gap: 4rem;
+        flex-direction: column;
+    }
+}

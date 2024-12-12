@@ -1,0 +1,14 @@
+{
+    "name": "acf/services-v2",
+    "title": "Services V2",
+    "description": "A custom services block.",
+    "style": "file:./style.css",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["Services V2", "quote"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "services.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,195 @@
+/* Variables and Mixins */
+/************ FONTS *************/
+@font-face {
+    font-family: 'UpaHandwriting Regular';
+    src: url('./fonts/UpaHandwritingLatin-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url('./fonts/AvenirLTStd-Medium.otf');
+}
+
+/************ COLORS *************/
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color: #232323;
+    --blue-color: #005EB8;
+    --light-blue-color: #F0F6FB;
+}
+
+/* Custom Block Style */
+
+.block .servicesV3 {
+    background-color: var(--light-blue-color);
+}
+
+.block .servicesV3 .servicesV3-container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 10rem 2rem;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 4rem;
+}
+
+.block .servicesV3 .servicesV3-container--content {
+    flex: 30%;
+}
+
+.block .servicesV3 .subTitle {
+    font-family: 'UpaHandwriting Regular';
+    color: var(--blue-color);
+    font-size: 2rem;
+}
+
+.block .servicesV3 .title {
+    font-size: 4rem;
+    padding: 2rem 0;
+}
+
+.block .servicesV3 .desc {
+    font-size: 1.6rem;
+    padding: 2rem 0;
+}
+
+.block .servicesV3 .servicesV3-container--service {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2rem;
+}
+
+.servicesV3 .service {
+    background-color: var(--primary-color);
+    padding: 4rem;
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    grid-gap: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+    z-index: 2;
+}
+
+.servicesV3 .service:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue-color);
+    position: absolute;
+    display: block;
+    left: -100%;
+    top: 0;
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+    z-index: -1;
+}
+
+.servicesV3 .service:hover:before {
+    left: 0;
+}
+
+.servicesV3 .service:hover .button-arrow {
+    background-color: var(--primary-color);
+    color: var(--blue-color);
+    transform: rotate(-20deg);
+}
+
+.servicesV3 .service .service-title {
+    flex: 30%;
+    font-size: 2.6rem;
+    line-height: 4rem;
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+}
+
+.servicesV3 .service:hover .service-title {
+    color: var(--primary-color);
+}
+
+.servicesV3 .service .service-desc {
+    flex: 60%;
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+}
+
+.servicesV3 .service:hover .service-desc {
+    color: var(--primary-color);
+}
+
+.servicesV3 .service .service-btn {
+    flex: 10%;
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+}
+
+.servicesV3 .service:hover .service-btn {
+    color: var(--primary-color);
+}
+
+.button-arrow {
+    background-color: var(--blue-color);
+    color: var(--primary-color);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s cubic-bezier(.25, .46, .45, .94);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.servicesV3 .service:hover .button-arrow {
+    background-color: var(--primary-color);
+    color: var(--blue-color);
+    transform: rotate(-20deg);
+}
+
+@media screen and (max-width: 1024px) {
+    .block .servicesV3 .title {
+        font-size: 2.6rem;
+    }
+
+    .servicesV3 .service .service-title {
+        flex: 30%;
+        font-size: 2rem;
+        line-height: 3rem;
+        transition: all .5s cubic-bezier(.25, .46, .45, .94);
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .block .servicesV3 .title {
+        font-size: 2.6rem;
+    }
+
+    .servicesV3 .service .service-title {
+        flex: 30%;
+        font-size: 2rem;
+        line-height: 3rem;
+        transition: all .5s cubic-bezier(.25, .46, .45, .94);
+    }
+
+    .block .servicesV3 .servicesV3-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .servicesV3 .service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+
+    .servicesV3 .service .service-title {
+        font-size: 1.8rem;
+    }
+
+    .servicesV3 .service .service-desc {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}

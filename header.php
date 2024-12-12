@@ -12,26 +12,44 @@
             <div class="nav-container">
                 <div class="nav-container--menu">
                     <div class="logo">
-                        <img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="logo">
+                        <a href="<?php echo home_url(); ?>"><img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="logo"></a>
                     </div>
                     <div class="menu">
-                        <?php
-                            wp_nav_menu(array(
-                                'theme_location' => 'wp_srghtheme_top_menu',
-                                'sort_column' => 'menu_order',
-                                'menu-id' =>'primary-menu',
-                                'depth' => 0,
-                                'container' =>'false' ,
-                                'menu_class' => 'menu-top',
-                            ));
-                        ?>
+                        <div class="menu-mobile" id="menu-mobile">
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'wp_srghtheme_primary_menu',
+                                    'sort_column' => 'menu_order',
+                                    'menu-id' =>'primary-menu',
+                                    'depth' => 0,
+                                    'container' =>'false' ,
+                                    'menu_class' => 'menu-primary',
+                                ));
+                            ?>
+                        </div>
+                        <div class="menu-desktop">
+                            <?php
+                                wp_nav_menu(array(
+                                    'theme_location' => 'wp_srghtheme_primary_menu',
+                                    'sort_column' => 'menu_order',
+                                    'menu-id' =>'primary-menu',
+                                    'depth' => 0,
+                                    'container' =>'false' ,
+                                    'menu_class' => 'menu-primary',
+                                ));
+                            ?>
+                        </div>
                     </div>
                 </div>
                 <div class="nav-container--btn">
                     <div class="icons">
                         <a href=""><i class="fa-solid fa-envelope"></i></a>
                     </div>
-                    <a href="#" class="contact">Contacteaza-ne</a>
+                    <div class="mobile-toggle">
+                        <button class="mobile-toggle--open" id="mobile-toggle--open"><i class="fa-solid fa-bars"></i></button>
+                        <button class="mobile-toggle--close" id="mobile-toggle--close"><i class="fa-solid fa-x"></i></button>
+                    </div>
+                    <a href="http://localhost:8888/Onetravel/index.php/contact/" class="contact">Contacteaza-ne</a>
                 </div>
             </div>
         </div>
