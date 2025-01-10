@@ -12,11 +12,11 @@ $testimonials = get_field('testimonials');
     <div class="testimonials">
         <div class="testimonials-container">
             <div class="testimonials-container--thumbnail">
-                <img src="http://localhost:8888/Onetravel/wp-content/uploads/2024/12/Testimonial-happy-girl-min.png" alt="">
+                <img src="http://localhost:8888/Onetravel/wp-content/uploads/2024/12/person-travel-min.png" alt="">
             </div>
             <div class="testimonials-container--testimonial">
-                <div class="subTitle"></div>
-                <div class="title"></div>
+                <div class="subTitle">Clients Testimonials</div>
+                <div class="title">Our Client Reviews</div>
                 <div class="testimonial">
                     <div class="testimonial-icon"><i class="fa-solid fa-quote-left"></i></div>
                     <div class="testimonial-text">Financial planners people to knowledge in about invest and save their moneye the most efficient way eve plan rs help people to knowledge in about how</div>

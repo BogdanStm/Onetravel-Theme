@@ -9,6 +9,7 @@ $title = get_field('title');
 $bgcolor = get_field('background_color');
 $txtcolor = get_field('text_color');
 $reverse = get_field('reverse_column');
+$btn = get_field('btn');
 ?>
 
 <div class="block">
@@ -24,6 +25,9 @@ $reverse = get_field('reverse_column');
             <div class="simpleSection-container--content">
                 <h1 style="color: <?php echo esc_html($txtcolor); ?>"><?php echo esc_html($title); ?></h1>
                 <p style="color: <?php echo esc_html($txtcolor); ?>"><?php the_field('content')?></p>
+                <?php if ( $btn ) { ?>
+                <div class="button-light"><a href="<?php echo esc_html($btn); ?>"><span>About us</span><i class="fa-solid fa-arrow-right"></i></a></div>
+                <?php }; ?>
             </div>
         </div>
     </div>

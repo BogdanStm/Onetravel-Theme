@@ -9,13 +9,17 @@
         left: 0;
         top: 0;
         height: 100%;
-        background: #005EB8;
+        background: linear-gradient(90deg, #2f231f, 90%, #DDBF67);
         z-index: 1;
         clip-path: polygon(0 0, 100% 0, calc(100% - 80px) 100%, 0% 100%);
         z-index: -1;
 
         @include breakpoint(medium) {
             width: 60%;
+        }
+
+        @include breakpoint(small) {
+            width: 70%;
         }
     }
 
@@ -99,7 +103,7 @@
                             a {
                                 text-decoration: none;
                                 color: var(--primary-color);
-                                font-size: 1.4rem;
+                                font-size: 1.6rem;
                             }
                         }
                     }
@@ -131,11 +135,11 @@
                 }
 
                 i {
-                    color: var(--blue-color);
+                    color: #f6bb7f;
                 }
 
                 &:hover {
-                    background-color: var(--blue-color);
+                    background-color: #f6bb7f;
 
                     i {
                         color: var(--primary-color);
@@ -178,7 +182,7 @@
             }
 
             .contact {
-                background-color: var(--blue-color);
+                background: #3e2f2a;
                 color: var(--primary-color);
                 padding: 1.4rem 2rem;
                 border-radius: 10rem;

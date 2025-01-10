@@ -1,0 +1,78 @@
+.header {
+    position: relative;
+    margin-top: -14rem;
+
+    &-image {
+        width: 100%;
+        height: 45rem;
+        object-fit: cover;
+        filter: brightness(60%);
+    }
+
+    &-title {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6rem;
+        color: var(--primary-color);
+
+        @include breakpoint(medium) {
+            font-size: 4rem;
+        }
+    }
+}
+
+.video{
+    position: relative;
+    margin-top: -14rem;
+
+    &-src video{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(60%);
+    }
+
+    &-title {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8rem;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-weight: bold;
+
+        img {
+            width: 40rem;
+        }
+
+        @include breakpoint(large) {
+            font-size: 6rem;
+
+            img {
+                width: 30rem;
+            }
+        }
+
+        @include breakpoint(medium) {
+            font-size: 4rem;
+            
+            img {
+                width: 20rem;
+            }
+        }
+
+        @include breakpoint(small) {
+            font-size: 4rem;
+            
+            img {
+                width: 30rem;
+            }
+        }
+    }
+}

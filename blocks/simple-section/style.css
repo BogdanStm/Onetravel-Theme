@@ -63,4 +63,13 @@
         grid-gap: 4rem;
         flex-direction: column;
     }
+
+    .block .simpleSection .simpleSection-container--content h1 {
+        font-size: 2.6rem;
+    }
+
+    .block .simpleSection .simpleSection-container--content {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
 }

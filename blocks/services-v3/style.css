@@ -186,10 +186,24 @@
 
     .servicesV3 .service .service-title {
         font-size: 1.8rem;
+        line-height: 2rem;
     }
 
     .servicesV3 .service .service-desc {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         text-align: center;
+    }
+
+    .block .servicesV3 .servicesV3-container--service {
+        flex: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-gap: 2rem;
+        text-align: center;
+    }
+    
+    .servicesV3 .service {
+        flex: 1 1 calc(50% - 1rem);
     }
 }

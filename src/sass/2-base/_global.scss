@@ -43,6 +43,17 @@ body {
     max-width: 1320px;
     margin: 2rem auto;
     padding: 2rem;
+
+    @include breakpoint(medium) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.reverse {
+    @include breakpoint(medium) {
+        flex-direction: column-reverse;
+    }
 }
 
 /* Button Light Style */
@@ -61,6 +72,11 @@ body {
     transition: all .5s cubic-bezier(.25, .46, .45, .94);
     font-size: 2rem;
     z-index: 2;
+
+    @include breakpoint(medium) {
+        width: 20rem;
+        font-size: 1.6rem;
+    }
 }
 
 .button-light a:before {

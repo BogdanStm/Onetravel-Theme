@@ -43,13 +43,13 @@
                 </div>
                 <div class="nav-container--btn">
                     <div class="icons">
-                        <a href=""><i class="fa-solid fa-envelope"></i></a>
+                        <a href="mailto:contact@oneevents.ro"><i class="fa-solid fa-envelope"></i></a>
                     </div>
                     <div class="mobile-toggle">
                         <button class="mobile-toggle--open" id="mobile-toggle--open"><i class="fa-solid fa-bars"></i></button>
                         <button class="mobile-toggle--close" id="mobile-toggle--close"><i class="fa-solid fa-x"></i></button>
                     </div>
-                    <a href="http://localhost:8888/Onetravel/index.php/contact/" class="contact">Contacteaza-ne</a>
+                    <a href="https://oneevents.ro/contact/" class="contact">Contacteaza-ne</a>
                 </div>
             </div>
         </div>

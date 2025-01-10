@@ -17,7 +17,7 @@ $services = get_field('services');
                 <div class="subTitle"><?php echo esc_html($subTitle); ?></div>
                 <div class="title"><?php echo esc_html($title); ?></div>
                 <div class="desc"><?php echo esc_html($desc); ?></div>
-                <div class="button-light"><a href="<?php echo esc_html($btn); ?>"><span>About us</span><i class="fa-solid fa-arrow-right"></i></a></div>
+                <div class="button-light"><a href="<?php echo esc_html($btn); ?>"><span>Contact Us</span><i class="fa-solid fa-arrow-right"></i></a></div>
             </div>
             <div class="servicesV3-container--service">
                 <?php foreach($services as $service) { ?>

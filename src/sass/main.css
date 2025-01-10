@@ -13,6 +13,9 @@
   --secondary-color: #232323;
   --blue-color: #005EB8;
   --light-blue-color: #F0F6FB;
+  --third-color: #3e2f2a;
+  --fourth-color: #F89C10;
+  --orange-color: #EDBB88;
 }
 
 /************ BREAKPOINTS *************/
@@ -59,6 +62,18 @@ body {
   margin: 2rem auto;
   padding: 2rem;
 }
+@media screen and (max-width: 1199px) {
+  .wp-block-group {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .reverse {
+    flex-direction: column-reverse;
+  }
+}
 
 /* Button Light Style */
 .button-light a {
@@ -75,6 +90,12 @@ body {
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   font-size: 2rem;
   z-index: 2;
+}
+@media screen and (max-width: 1199px) {
+  .button-light a {
+    width: 20rem;
+    font-size: 1.6rem;
+  }
 }
 
 .button-light a:before {
@@ -113,7 +134,7 @@ body {
   left: 0;
   top: 0;
   height: 100%;
-  background: #005EB8;
+  background: linear-gradient(90deg, #2f231f, 90%, #DDBF67);
   z-index: 1;
   clip-path: polygon(0 0, 100% 0, calc(100% - 80px) 100%, 0% 100%);
   z-index: -1;
@@ -121,6 +142,11 @@ body {
 @media screen and (max-width: 1199px) {
   .nav:before {
     width: 60%;
+  }
+}
+@media screen and (max-width: 499px) {
+  .nav:before {
+    width: 70%;
   }
 }
 .nav-container {
@@ -196,7 +222,7 @@ body {
 .nav-container--menu .menu-desktop ul li a {
   text-decoration: none;
   color: var(--primary-color);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
 }
 .nav-container--btn {
   display: flex;
@@ -223,10 +249,10 @@ body {
   }
 }
 .nav-container--btn .icons a i {
-  color: var(--blue-color);
+  color: #f6bb7f;
 }
 .nav-container--btn .icons a:hover {
-  background-color: var(--blue-color);
+  background-color: #f6bb7f;
 }
 .nav-container--btn .icons a:hover i {
   color: var(--primary-color);
@@ -263,7 +289,7 @@ body {
   z-index: 99;
 }
 .nav-container--btn .contact {
-  background-color: var(--blue-color);
+  background: #3e2f2a;
   color: var(--primary-color);
   padding: 1.4rem 2rem;
   border-radius: 10rem;
@@ -293,6 +319,81 @@ body {
 .footer ul li a {
   text-decoration: none;
   color: var(--primary-color);
+}
+
+.header {
+  position: relative;
+  margin-top: -14rem;
+}
+.header-image {
+  width: 100%;
+  height: 45rem;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.header-title {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 6rem;
+  color: var(--primary-color);
+}
+@media screen and (max-width: 1199px) {
+  .header-title {
+    font-size: 4rem;
+  }
+}
+
+.video {
+  position: relative;
+  margin-top: -14rem;
+}
+.video-src video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+.video-title {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+.video-title img {
+  width: 40rem;
+}
+@media screen and (max-width: 1499px) {
+  .video-title {
+    font-size: 6rem;
+  }
+  .video-title img {
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .video-title {
+    font-size: 4rem;
+  }
+  .video-title img {
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 499px) {
+  .video-title {
+    font-size: 4rem;
+  }
+  .video-title img {
+    width: 30rem;
+  }
 }
 
 .pagination {
@@ -356,9 +457,29 @@ body {
 }
 
 .wpcf7-form {
-  background-color: var(--light-blue-color);
+  background-color: var(--primary-color);
+  box-shadow: 0 0 2rem -0.6rem rgba(0, 0, 0, 0.1);
   padding: 2rem;
   border-radius: 2rem;
+}
+.wpcf7-form label {
+  font-size: 1.6rem;
+}
+.wpcf7-form .wpcf7-form-control {
+  width: 100%;
+  background-color: var(--light-blue-color);
+  border: 1px solid var(--light-blue-color);
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+}
+.wpcf7-form .wpcf7-submit {
+  width: 40%;
+  background-color: var(--blue-color);
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  padding: 2rem 0;
+  border-radius: 10rem;
 }
 
 /*# sourceMappingURL=main.css.map */

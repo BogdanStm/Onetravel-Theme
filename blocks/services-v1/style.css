@@ -87,10 +87,35 @@
     color: var(--primary-color);
 }
 
-@media screen and (min-width: 499px) {
+@media screen and (max-width: 499px) {
     .block .services .service-icon {
-        color: var(--blue-color);
-        font-size: 2rem;
-        text-align: left;
+        font-size: 3rem!important;
+    }
+
+    .block .services-title {
+        font-size: 2.6rem!important;
+        width: 100%!important;
+    }
+
+    .block .services .service-name {
+        font-size: 2rem!important;
+        width: 100%!important;
+    }
+
+    .block .services .service {
+        background-color: var(--light-blue-color);
+        flex: 1 1 calc(30% )!important;
+        width: 100%!important;
+        height: 15rem!important;
+        padding: 2rem!important;
+    }
+
+    .block .services-container {
+        grid-gap: 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 2rem;
     }
 }

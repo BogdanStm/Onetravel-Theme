@@ -20,69 +20,110 @@
 
 /* Custom Block Style */
 
-.block .services {
+.block .testimonials {
     max-width: 1320px;
     margin: 0 auto;
-    padding: 10rem 0;
     font-size: 1.6rem;
-    text-align: center;
+    padding: 10rem 2rem;
 }
 
-.block .services-subTitle {
-    font-family: 'UpaHandwriting Regular';
-    color: var(--blue-color);
-    font-size: 2rem;
-}
-
-.block .services-title {
-    font-size: 4rem;
-    padding: 2rem 0;
-    width: 30%;
-    margin: 0 auto;
-}
-
-.block .services-container {
+.block .testimonials-container {
+    display: flex;
+    align-items: end;
     grid-gap: 2rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 2rem;
+    flex: 1 1 (50% - 1rem);
 }
 
-.block .services .service {
-    background-color: var(--light-blue-color);
-    max-width: 30rem;
-    width: 100%;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 4rem;
-    border-radius: 2rem;
-    transition: all .8s ease-in-out;
+.block .testimonials-container .testimonials-container--thumbnail {
+    width: 60%;
 }
 
-.block .services .service-icon {
-    color: var(--blue-color);
-    font-size: 6rem;
-    text-align: left;
+.block .testimonials-container .testimonials-container--thumbnail img {
+    width: 60%;
 }
 
-.block .services .service-name {
-    font-size: 3rem;
-    text-align: left;
+.block .testimonials-container--testimonial {
     width: 40%;
 }
 
-.block .services .service:hover {
-    background-color: var(--blue-color);
+.block .testimonials-container--testimonial .subTitle {
+    font-family: 'UpaHandwriting Regular';
+    color: var(--blue-color);
 }
 
-.block .services .service:hover .service-icon {
-    color: var(--primary-color);
+.block .testimonials-container--testimonial .title {
+    font-size: 4rem;
+    padding: 2rem 0;
 }
 
-.block .services .service:hover .service-name {
-    color: var(--primary-color);
+.block .testimonial {
+    background-color: var(--light-blue-color);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.block .testimonial .testimonial-icon {
+    font-size: 6rem;
+    text-align: left;
+    color: var(--blue-color);
+}
+
+.block .testimonial .testimonial-text {
+    font-size: 3rem;
+    line-height: 4rem;
+    text-align: left;
+}
+
+.block .testimonial .testimonial-person {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 2rem;
+}
+
+.block .testimonial-person img {
+    width: 8rem;
+    margin-top: 4rem;
+}
+
+.block .testimonial-person .testimonial-person--name {
+    padding: 1rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1024px) {
+    .block .testimonials-container .testimonials-container--thumbnail { 
+        display: none;
+    }
+
+    .block .testimonials-container--testimonial {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .block .testimonials-container .testimonials-container--thumbnail { 
+        display: none;
+    }
+
+    .block .testimonials-container--testimonial {
+        width: 100%;
+    }
+
+    .block .testimonial .testimonial-text {
+        font-size: 2rem;
+        line-height: 3rem;
+        text-align: left;
+    }
+
+    .block .testimonials-container--testimonial .subTitle {
+        font-family: 'UpaHandwriting Regular';
+        color: var(--blue-color);
+    }
+    
+    .block .testimonials-container--testimonial .title {
+        font-size: 3rem;
+        padding: 2rem 0;
+    }
 }

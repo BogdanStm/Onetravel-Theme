@@ -24,21 +24,21 @@
     display: flex;
     align-items: center;
     margin: 2rem 0;
+    grid-gap: 2rem;
 }
 
 .info-icon {
     background-color: var(--blue-color);
     color: var(--primary-color);
+    border-radius: 100%;
+}
+
+.info-icon i {
     width: 5rem;
     height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100%;
-}
-
-.info-content {
-    padding-left: 2rem;
 }
 
 .info-content--name {
